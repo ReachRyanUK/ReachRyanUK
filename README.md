@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @ReachRyanUK
+- 👋 Hi, I’m Ryan (@ReachRyanUK)
 - 👀 I’m interested in Web Development, Creative Coding & Graphic Design
 - 🌱 I’m currently learning everything I can to become the world champion Web Developer
 - 💞️ I’m looking to collaborate on anything interesting
