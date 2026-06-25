@@ -230,6 +230,74 @@ img { display: block; max-width: 100%; }
 .play-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
 html.play .play-dot { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
 
+/* ---- hero ---- */
+
+.hero-body {
+    gap: 10%;
+}
+
+.hero-body.builds, .hero-body.threeD {
+    gap: 5%;
+}
+
+@media (max-width: 600px) {
+  .hero-body.builds {
+      flex-direction: column;
+  }
+}
+
+.hero-body-center {
+  text-align: center;
+  margin: auto;
+}
+
+.homeTitle {
+  display: inline-block;
+  color: white;
+  font-family: GTWalsheimProL;
+  margin: 2vw 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  word-break: auto-phrase;
+}
+
+.homeTitleBlack {
+  display: inline-block;
+  color: black;
+  font-family: GTWalsheimProL;
+  margin: 2vw 0;
+  font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+
+.homeSub {
+  font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+  color: white;
+  font-family: GTWalsheimProL;
+  margin: 2vw 0 1vw;
+}
+
+.homeSubSub {
+
+}
+
+.homeSubBlack {
+color: black;
+font-family: GTWalsheimProL;
+margin: 2vw 0;
+}
+
+.homeSubLabel {
+  color: #aaa;
+  text-align: right
+}
+
+   
 /* ---- domTree ---- */
 
 .tab-container {
@@ -694,11 +762,19 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="pill" data-reveal><span class="dot"></span>Open to full-time development roles</div>
-    <h1 data-reveal>
+    <!-- <h1 data-reveal>
       <span class="line1">UX Developer</span>
       <span class="line2">React <span class="amp">&amp;</span> Design Lead</span>
     </h1>
-    <p class="lead" data-reveal>I build interfaces where engineering and design meet. Primarily a front-end developer, with a designer's eye for craft and a game-maker's instinct for interaction.</p>
+    <p class="lead" data-reveal>I build interfaces where engineering and design meet. Primarily a front-end developer, with a designer's eye for craft and a game-maker's instinct for interaction.</p> -->
+    <div class="hero-body">
+      <h1 class="title homeTitle">
+        <span id="typewriter"></span> Ryan
+      </h1>
+      <p class="homeSub">
+        UX Developer. Lead Designer. Creative Coder.
+      </p>
+    </div>
     <div id="rbrahul-awesome-json" class="pl-6" style="padding-bottom: 50px;">
       <div data-reactroot="" class="App">
         <div class="ml-6">
@@ -1103,6 +1179,7 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
 })();
 </script>
 
+/* --- DOMTree --- */
 <script>
   var coll = document.getElementsByClassName("collapsible");
   var i;
@@ -1141,6 +1218,22 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
       }
     });
   }
+</script>
+
+/* --- Typewriter --- */
+<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js"></script>
+<script>
+new Typewriter('#typewriter', {
+  strings: ["Hi I'm", "I'm a Web Developer, specialising in React. My name's", "Sorry, erm, it's me", "Nice to meet you! I'm", "Coding is a conversation with machines. My name? Oh, it's", "Don't you remember? It's me", "I hope I'm not repeating myself, but I'm"],
+  autoStart: true,
+  loop: true,
+});
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({
+  once: true
+});
 </script>
 
 </body>
