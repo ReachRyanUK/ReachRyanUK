@@ -90,6 +90,7 @@ img { display: block; max-width: 100%; }
   font-family: var(--display); font-weight: 900;
   /* font-size: clamp(40px, 8.5vw, 116px); line-height: .94; letter-spacing: -.035em; */
   margin: 0 0 28px; text-wrap: balance;
+  color: var(--ink);
 }
 .hero h1 .line2 { color: var(--sub); }
 .hero h1 .amp { color: var(--accent); }
@@ -275,10 +276,9 @@ html.play .play-dot { background: var(--accent); box-shadow: 0 0 10px var(--acce
 
 .homeSub {
   font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.25;
-  color: white;
-  /* font-family: GTWalsheimProL; */
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
   margin: 1vw 0 2vw;
 }
 
@@ -710,6 +710,38 @@ a.json-placeholder:hover {
   text-decoration: underline
 }
 
+/* ---------- profile pic ---------- */
+.avatar-float {
+    position: fixed;
+    top: clamp(70px, 12vh, 130px);
+    right: clamp(20px, 5vw, 64px);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 6px 
+color-mix(in oklab, var(--accent) 12%, transparent);
+}
+
+@media (max-width: 600px) {
+    .avatar-float {
+        position: absolute;
+        top: clamp(70px, 12vh, 130px);
+        right: clamp(20px, 5vw, 64px);
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.avatar {
+    object-fit: cover;
+    display: block;
+    border: 1px solid 
+color-mix(in oklab, var(--accent) 40%, var(--line));
+    background: linear-gradient(135deg, 
+color-mix(in oklab, var(--accent) 30%, var(--surface)), var(--surface));
+}
+
 
 /* ---------- playful: cursor orb (only when .play) ---------- */
 .orb {
@@ -760,6 +792,7 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
 <!-- ===================== HERO ===================== -->
 <header class="hero wrap" id="top">
   <div class="hero-bg"></div>
+  <img class="avatar avatar-float" src="images/profile.jpg" alt="Ryan Abrahams">
   <div class="hero-inner">
     <div class="pill" data-reveal><span class="dot"></span>Open to full-time development roles</div>
     <!-- <h1 data-reveal>
@@ -924,7 +957,7 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
       </div>
       <div class="case-media">
          <img src="./images/thumbs/redwood-calculator.png" alt="Property investment calculator" style="object-fit: cover;object-position: top;">
-         <div class="ph">calculator interface</div>
+         <!-- <div class="ph">calculator interface</div> -->
       </div>
     </a>
  
@@ -1017,10 +1050,10 @@ html.play .hero-bg { animation: drift 9s ease-in-out infinite; }
       <div class="card-body"><div class="card-top"><h3>Branding &amp; Design Work</h3><span class="card-year">2022</span></div><p>Identity, album art and design for clients, drawing on years of creative work.</p></div>
     </article>
  
-    <article class="card" data-reveal data-tilt data-cat="dev">
+    <!-- <article class="card" data-reveal data-tilt data-cat="dev">
       <div class="card-media"><span class="card-cat">Development</span><div class="ph">calculator UI</div></div>
       <div class="card-body"><div class="card-top"><h3>Financial Calculator Suite</h3><span class="card-year">2023</span></div><p>Third in a set of data-heavy React financial tools built for finance-sector clients.</p></div>
-    </article>
+    </article> -->
  
   </div>
 </section>
