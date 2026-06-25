@@ -26,10 +26,10 @@
   --mono: 'IBM Plex Mono', monospace;      /* labels / code chips */
 }
 html[data-theme="dark"] {
-  --bg: #0f1110;  --ink: #e6e4dd;  --sub: #8b908a;  --surface: #181b19;  --line: #272b28;
+  --bg: #0f1110;  --ink: #e6e4dd;  --sub: #8b908a;  --surface: #181b19;  --line: #272b28; --property: #4fdee5; --string: #01ff70; 
 }
 html[data-theme="light"] {
-  --bg: #f3f4f2;  --ink: #141716;  --sub: #5e635d;  --surface: #fbfcfa;  --line: #dde0dc;
+  --bg: #f3f4f2;  --ink: #141716;  --sub: #5e635d;  --surface: #fbfcfa;  --line: #dde0dc; --property: #00969e; --string: #00b14d;
 }
 
 /* ---------- base ---------- */
@@ -425,7 +425,7 @@ ul.json-dict li {
 }
 
 .property {
-  color: #4fdee5;
+  color: var(--property);
   line-height: 160%;
   font-family: monospace;
   font-weight: 700;
@@ -450,7 +450,7 @@ ul.json-dict li {
 }
 
 .json-literal-string {
-  color: #01ff70;
+  color: var(--string);
   font-family: monospace;
   white-space: normal;
 }
